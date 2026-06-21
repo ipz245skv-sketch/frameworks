@@ -19,5 +19,5 @@
 * **Команди Laravel:** `php artisan migrate`, `php artisan serve`, `composer install:api`.
 * **Команди Symfony:** `php bin/console make:entity`, `php bin/console make:migration`, `php bin/console doctrine:migrations:migrate`, `php bin/console make:controller`, `php -S 127.0.0.1:8081 -t public`.
 
-**Виконав:** Скородинський Кирило ІПЗ-24-5
+**Виконав:** Скородинський Кирило ІПЗ-24-5.
 **Тема:** Playlist

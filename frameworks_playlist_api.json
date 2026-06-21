@@ -1,0 +1,215 @@
+{
+	"info": {
+		"name": "Frameworks Playlist API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Laravel API (Port 8000)",
+			"item": [
+				{
+					"name": "Get All Playlists",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/playlists",
+							"protocol": "http",
+							"host": ["127", "0", "0", "1"],
+							"port": "8000",
+							"path": ["api", "playlists"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Playlist",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/playlists/1",
+							"protocol": "http",
+							"host": ["127", "0", "0", "1"],
+							"port": "8000",
+							"path": ["api", "playlists", "1"]
+						},
+						"description": "1 - це ID плейлиста, який потрібно отримати"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Playlist",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Мій улюблений рок\",\n    \"description\": \"Найкращі треки для тренувань\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/playlists",
+							"protocol": "http",
+							"host": ["127", "0", "0", "1"],
+							"port": "8000",
+							"path": ["api", "playlists"]
+						},
+						"description": "name - обов'язкове поле, description - необов'язкове"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Playlist",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Оновлений Плейлист\",\n    \"description\": \"Новий опис\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/playlists/1",
+							"protocol": "http",
+							"host": ["127", "0", "0", "1"],
+							"port": "8000",
+							"path": ["api", "playlists", "1"]
+						},
+						"description": "PATCH дозволяє оновлювати лише ті поля, які передані. У URL вказано ID плейлиста, який оновлюємо."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Playlist",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/playlists/1",
+							"protocol": "http",
+							"host": ["127", "0", "0", "1"],
+							"port": "8000",
+							"path": ["api", "playlists", "1"]
+						},
+						"description": "Видаляємо плейлист із вказаним ID"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Symfony API (Port 8081)",
+			"item": [
+				{
+					"name": "Get All Playlists",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8081/api/playlists",
+							"protocol": "http",
+							"host": ["127", "0", "0", "1"],
+							"port": "8081",
+							"path": ["api", "playlists"]
+						},
+						"description": "Symfony API працює на порту 8081 (відрізняється від Laravel)"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Playlist",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8081/api/playlists/1",
+							"protocol": "http",
+							"host": ["127", "0", "0", "1"],
+							"port": "8081",
+							"path": ["api", "playlists", "1"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Playlist",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Мій улюблений реп\",\n    \"description\": \"Треки для відпочинку\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8081/api/playlists",
+							"protocol": "http",
+							"host": ["127", "0", "0", "1"],
+							"port": "8081",
+							"path": ["api", "playlists"]
+						},
+						"description": "Відрізняється від Laravel: 'реп' замість 'рок'"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Playlist",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Оновлений Плейлист Symfony\",\n    \"description\": \"Змінено через PATCH\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8081/api/playlists/1",
+							"protocol": "http",
+							"host": ["127", "0", "0", "1"],
+							"port": "8081",
+							"path": ["api", "playlists", "1"]
+						},
+						"description": "Symfony додає уточнення у назву оновленного плейлиста"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Playlist",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8081/api/playlists/1",
+							"protocol": "http",
+							"host": ["127", "0", "0", "1"],
+							"port": "8081",
+							"path": ["api", "playlists", "1"]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
